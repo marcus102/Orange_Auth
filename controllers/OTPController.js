@@ -3,6 +3,7 @@ const router = express.Router();
 const crypto = require('crypto');
 const catchAsync = require('../utils/catchAsync');
 const appError = require('../utils/appError');
+const sendEmail = require('../utils/email');
 
 // In-memory store for OTPs (for simplicity, replace with Redis or similar for production)
 const otpStore = new Map();
@@ -42,40 +43,32 @@ exports.generateOTP = catchAsync(async (req, res, next) => {
 
     // Here, you might send the OTP via SMS or any other delivery mechanism.
     // For now, returning it in the response for demonstration purposes.
-    return res.status(200).json({
-      message: 'OTP generated successfully.',
-      otp,
-      expiresAt: Date.now() + 1 * 60 * 1000, // Inform the client about the expiration time
-    });
+
+    const message = `Your OTP is: ${otp}`;
+    try {
+      await sendEmail({
+        email: user.email_address,
+        subject: 'Your password reset OTP (Valid for 1min).',
+        message,
+      });
+
+      res.status(200).json({
+        status: 'success',
+        message: 'Token sent to email!',
+      });
+    } catch (err) {
+      user.passwordResetToken = undefined;
+      user.passwordResetExpires = undefined;
+      await user.save({ validateBeforeSave: false });
+
+      return next(appError('there was an error sending this email, please try again later!', 500));
+    }
+    // return res.status(200).json({
+    //   message: 'OTP generated successfully.',
+    //   otp,
+    //   expiresAt: Date.now() + 1 * 60 * 1000, // Inform the client about the expiration time
+    // });
   } else {
     return res.status(200).json({ message: 'Response is false; OTP not generated.' });
   }
 });
-
-// GET Route to Fetch OTP
-// exports.getOTP = async (req, res) => {
-//   try {
-//     const { phone_number } = req.query;
-
-//     if (!phone_number) {
-//       return res.status(400).json({ error: 'Phone number is required.' });
-//     }
-
-//     const otpData = otpStore.get(phone_number);
-
-//     if (!otpData) {
-//       return res.status(404).json({ error: 'No OTP found for this phone number.' });
-//     }
-
-//     // Check if the OTP is expired
-//     if (Date.now() > otpData.expiresAt) {
-//       otpStore.delete(phone_number);
-//       return res.status(410).json({ error: 'OTP expired.' });
-//     }
-
-//     return res.status(200).json({ otp: otpData.otp });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: 'An error occurred.' });
-//   }
-// };

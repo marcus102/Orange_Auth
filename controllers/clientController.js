@@ -77,27 +77,3 @@ exports.verifyUserInformation = catchAsync(async (req, res) => {
 
   res.status(200).json({ isMatch });
 });
-
-// Get comparison result (True/False)
-// exports.sendComparisonResult = catchAsync(async (req, res, next) => {
-//   const { phone_number } = req.query;
-
-//   // Get the comparison result for the specified phone number
-//   const comparisonResult = numStore.get(phone_number);
-
-//   if (comparisonResult === undefined) {
-//     return next(appError('Comparison result not found!', 404));
-//   }
-
-//   res.status(200).json({ result: comparisonResult });
-// });
-// exports.storeCurrentUserPhoneNumber = catchAsync(async (req, res) => {
-//   const { phone_number } = req.body;
-
-//   await Client.updateOne(
-//     { phone_number },
-//     { $set: { phone_number } },
-//     { upsert: true } // Create if it doesn't exist
-//   );
-//   res.status(200).json({ message: 'Phone number stored successfully.' });
-// });
