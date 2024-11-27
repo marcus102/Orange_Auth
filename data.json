@@ -1,0 +1,165 @@
+[
+    {
+      "firstName": "Issa",
+      "lastName": "Ouattara",
+      "age": 30,
+      "date_of_birth": "1994-06-15",
+      "place_of_birth": "Ouagadougou",
+      "CNIB_number": 123456789012,
+      "email": {
+        "address": "issa.ouattara@gmail.com",
+        "visibility": "public"
+      },
+      "phone": "+22670123456",
+      "role": "user",
+      "profession": "Teacher",
+      "location": "Ouagadougou",
+      "password": "password123",
+      "passwordConfirm": "password123"
+    },
+    {
+      "firstName": "Fatima",
+      "lastName": "Kaboré",
+      "age": 25,
+      "date_of_birth": "1999-03-22",
+      "place_of_birth": "Bobo-Dioulasso",
+      "CNIB_number": 234567890123,
+      "email": {
+        "address": "fatima.kabore@yahoo.com",
+        "visibility": "private"
+      },
+      "phone": "+22671123457",
+      "role": "user",
+      "profession": "Nurse",
+      "location": "Bobo-Dioulasso",
+      "password": "securepassword",
+      "passwordConfirm": "securepassword"
+    },
+    {
+      "firstName": "Amadou",
+      "lastName": "Traoré",
+      "age": 35,
+      "date_of_birth": "1989-10-10",
+      "place_of_birth": "Koudougou",
+      "CNIB_number": 345678901234,
+      "email": {
+        "address": "amadou.traore@hotmail.com",
+        "visibility": "public"
+      },
+      "phone": "+22672123458",
+      "role": "user",
+      "profession": "Engineer",
+      "location": "Koudougou",
+      "password": "traorepass123",
+      "passwordConfirm": "traorepass123"
+    },
+    {
+      "firstName": "Salimata",
+      "lastName": "Zongo",
+      "age": 28,
+      "date_of_birth": "1996-01-17",
+      "place_of_birth": "Ouahigouya",
+      "CNIB_number": 456789012345,
+      "email": {
+        "address": "salimata.zongo@gmail.com",
+        "visibility": "public"
+      },
+      "phone": "+22673123459",
+      "role": "user",
+      "profession": "Accountant",
+      "location": "Ouahigouya",
+      "password": "zongo2024",
+      "passwordConfirm": "zongo2024"
+    },
+    {
+      "firstName": "Abdoulaye",
+      "lastName": "Sanou",
+      "age": 40,
+      "date_of_birth": "1984-12-05",
+      "place_of_birth": "Banfora",
+      "CNIB_number": 567890123456,
+      "email": {
+        "address": "abdoulaye.sanou@gmail.com",
+        "visibility": "public"
+      },
+      "phone": "+22674123450",
+      "role": "user",
+      "profession": "Doctor",
+      "location": "Banfora",
+      "password": "sanou123456",
+      "passwordConfirm": "sanou123456"
+    },
+    {
+      "firstName": "Adama",
+      "lastName": "Yameogo",
+      "age": 22,
+      "date_of_birth": "2002-07-20",
+      "place_of_birth": "Fada N'gourma",
+      "CNIB_number": 678901234567,
+      "email": {
+        "address": "adama.yameogo@gmail.com",
+        "visibility": "private"
+      },
+      "phone": "+22675123451",
+      "role": "user",
+      "profession": "Student",
+      "location": "Fada N'gourma",
+      "password": "yameogoPass",
+      "passwordConfirm": "yameogoPass"
+    },
+    {
+      "firstName": "Awa",
+      "lastName": "Ouedraogo",
+      "age": 29,
+      "date_of_birth": "1995-11-02",
+      "place_of_birth": "Tenkodogo",
+      "CNIB_number": 789012345678,
+      "email": {
+        "address": "awa.ouedraogo@gmail.com",
+        "visibility": "public"
+      },
+      "phone": "+22676123452",
+      "role": "user",
+      "profession": "Entrepreneur",
+      "location": "Tenkodogo",
+      "password": "awa2024secure",
+      "passwordConfirm": "awa2024secure"
+    },
+    {
+      "firstName": "Moussa",
+      "lastName": "Diallo",
+      "age": 34,
+      "date_of_birth": "1990-05-19",
+      "place_of_birth": "Dédougou",
+      "CNIB_number": 890123456789,
+      "email": {
+        "address": "moussa.diallo@gmail.com",
+        "visibility": "public"
+      },
+      "phone": "+22677123453",
+      "role": "user",
+      "profession": "Farmer",
+      "location": "Dédougou",
+      "password": "moussaDpass",
+      "passwordConfirm": "moussaDpass"
+    },
+    {
+      "firstName": "Seydou",
+      "lastName": "Kinda",
+      "age": 45,
+      "date_of_birth": "1979-08-12",
+      "place_of_birth": "Pô",
+      "CNIB_number": 901234567890,
+      "email": {
+        "address": "seydou.kinda@gmail.com",
+        "visibility": "public"
+      },
+      "phone": "+22678123454",
+      "role": "user",
+      "profession": "Mechanic",
+      "location": "Pô",
+      "password": "kindapassword",
+      "passwordConfirm": "kindapassword"
+    }
+  ]
+  
